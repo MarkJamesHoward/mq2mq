@@ -1,0 +1,19 @@
+services:
+  QM1:
+    image: icr.io/ibm-messaging/mq:latest
+    ports:
+      - "9443:9443"
+      - "1414:1414"
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=QM1
+      - MQ_APP_PASSWORD=passw0rd
+  QM2:
+    image: icr.io/ibm-messaging/mq:latest
+    ports:
+      - "9444:9443"
+      - "1415:1414"
+    environment:
+      - LICENSE=accept
+      - MQ_QMGR_NAME=QM2
+      - MQ_APP_PASSWORD=passw0rd
